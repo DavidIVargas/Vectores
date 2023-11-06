@@ -15,5 +15,6 @@ public class Ejercicio_5 {
         obj.crearVectot();
         obj.ingresoVector();
         obj.mostrarVector();
+        obj.promedioVector();
     }
 }
