@@ -11,42 +11,57 @@ import java.util.Scanner;
  * @author Estudiante
  */
 public class Vector {
+
     int n;
     int v[];
     Scanner t = new Scanner(System.in);
-    public void crearVectot(){
+
+    public void crearVectot() {
         System.out.print(" $ Espacios: ");
         n = t.nextInt();
         v = new int[n];
     }
-    
-    public void ingresoVector(){
+
+    public void ingresoVector() {
         int i;
-        for(i = 0; i < (n-1) ; i++){
+        for (i = 0; i < (n - 1); i++) {
             System.out.println("v [" + i + "]:");
             v[i] = t.nextInt();
         }
     }
-    
-    public void mostrarVector(){
+
+    public void mostrarVector() {
         int i;
         System.out.println("contenido vector");
-        for (i = 0; i <= (n-1); i++){
-            System.out.println("v[" +i+"] : " + v[i]);
-        }  
+        for (i = 0; i <= (n - 1); i++) {
+            System.out.println("v[" + i + "] : " + v[i]);
+        }
     }
-    
-    public void promedioVector(){
+
+    public void promedioVector() {
         float s;
         float p;
         int i;
-        
+
         s = 0;
-        
-        for (i = 0; i<=(n-1) ; i++){
-            s = s +v[i];
+
+        for (i = 0; i <= (n - 1); i++) {
+            s = s + v[i];
         }
-        p = s/n;
+        p = s / n;
         System.out.println("Promedio" + s + " / " + n + " = " + p);
+    }
+
+    public void mayorVector() {
+        int i;
+        int ma;
+        int me;
+        ma = v[0];
+        me = v[0];
+        for (i = 0 ;i <= (n - 1); i++){
+            if (v[i] > ma) ma = v[i];
+            if (v[i] < me) me = v[i];
+        }
+        System.out.println("Mayor: " + ma);
     }
 }

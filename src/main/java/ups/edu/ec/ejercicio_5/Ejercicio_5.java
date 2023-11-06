@@ -16,5 +16,6 @@ public class Ejercicio_5 {
         obj.ingresoVector();
         obj.mostrarVector();
         obj.promedioVector();
+        obj.mayorVector();
     }
 }
